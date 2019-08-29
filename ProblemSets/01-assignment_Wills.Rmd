@@ -1,0 +1,10 @@
+"Hello, World"
+
+```{r combining commands}
+## What's the average earnings  for very selective schools?
+sc%>%filter(adm_rate<.1)%>%summarize(mean_earnings=mean(md_earn_wne_p6,na.rm=TRUE))
+
+## And for not very selective schools?
+sc%>%filter(adm_rate>.3)%>%summarize(mean_earnings=mean(md_earn_wne_p6,na.rm=TRUE))
+
+```
